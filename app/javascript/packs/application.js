@@ -10,8 +10,12 @@ import "channels"
 
 require("@rails/ujs").start()
 require("@rails/activestorage").start()
+require("turbolinks").start()
 require("channels")
 require("bootstrap")
+require("moment/locale/sl")
+require("tempusdominus-boostrap-4")
+
 // CSS
 import 'scss/site'
 // JS
@@ -19,6 +23,8 @@ import('js/site')
 // Images
 const images = require.context('../images', true)
 const imagePath = (name) => images(name, true)
+
+import "@fortawesome/fontawesome-free/js/all";
 
 Rails.start()
 Turbolinks.start()
