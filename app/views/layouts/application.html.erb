@@ -11,6 +11,7 @@
   </head>
 
   <body style="background-image: linear-gradient(white, yellow); background-attachment: fixed;">
+    <div class="container">
     <div class="navbar">
     <%= link_to "Domov", root_path %>
     <%= display_session_links %>
@@ -18,5 +19,6 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    </div>
   </body>
 </html>
