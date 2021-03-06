@@ -6,8 +6,8 @@
           <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2"><%= post.user.name || 'Anonimen avtor' %></strong>
             <h3 class="mb-0"><%= post.title %></h3>
-            <div class="mb-1 text-muted"><%= time_ago_in_words(post.created_at) %></div>
-            <p class="card-text mb-auto"><%= post.body %></p>
+            <div class="mb-1 text-muted"><%= post.created_at.strftime('%d.%m.%Y') %></div>
+            <p class="card-text mb-auto"><%= post.body.truncate(27, separator: /\s/) %></p>
             <%= display_index_post_links(post) %>
           </div>
         </div>
