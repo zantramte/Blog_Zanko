@@ -3,8 +3,8 @@ module PostsHelper
     capture do
       concat link_to('Show', post, class: 'streched-link')
       if current_user == post.user
-        concat content_tag(:td, link_to('Edit', edit_post_path(post)))
-        concat content_tag(:td, link_to('Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }))
+        concat link_to('Edit', edit_post_path(post))
+        concat link_to('Destroy', post, method: :delete, data: { confirm: 'Are you sure?' })
       end
     end
   end
