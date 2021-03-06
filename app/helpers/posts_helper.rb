@@ -3,8 +3,8 @@ module PostsHelper
     capture do
       concat link_to('Preberi več', post, class: 'streched-link')
       if current_user == post.user
-        concat link_to('Edit', edit_post_path(post), class: 'streched-link')
-        concat link_to('Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'streched-link')
+        concat link_to('Uredi', edit_post_path(post), class: 'streched-link')
+        concat link_to('Izbriši', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'streched-link')
       end
     end
   end
