@@ -1,22 +1,21 @@
 <h1>Posts</h1>
     <div class="row mb-2">
+    <% @posts.each do |post| %>
       <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"  style="background-color: white;">
           <div class="col p-4 d-flex flex-column position-static">
             <strong class="d-inline-block mb-2 text-primary">World</strong>
             <h3 class="mb-0"><%= post.title %></h3>
             <div class="mb-1 text-muted">Nov 12</div>
             <p class="card-text mb-auto"><%= post.body %></p>
-            <a href="#" class="stretched-link">Continue reading</a>
+            <%= display_index_post_links(post) %>
           </div>
         </div>
       </div>
-    <% @posts.each do |post| %>
       <tr>
         <td></td>
-        <td><%= post.body %></td>
-        <td><%= post.user.name || 'Anonimen avtor' %></td>
-        <%= display_index_post_links(post) %>
+        <td></td>
+        <td></td>
     <% end %>
     </div>
 <br>
