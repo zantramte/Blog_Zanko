@@ -1,13 +1,13 @@
-<h1>Posts</h1>
+<h1>News</h1>
     <div class="row mb-2">
     <% @news.each do |news| %>
       <div class="col-md-6">
-        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"  style="background-color: white;">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"  style="background-color: white; margin-right: 20px;">
           <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary"><%= news.user.name || 'Anonimen avtor' %></strong>
+            <strong class="d-inline-block mb-2"><%= news.user.name || 'Anonimen avtor' %></strong>
             <h3 class="mb-0"><%= news.title %></h3>
-            <div class="mb-1 text-muted"><%= post.created_at.strftime('%d.%m.%Y') %></div>
-            <p class="card-text mb-auto"><%= post.body.truncate(40, separator: /\s/) %></p>
+            <div class="mb-1 text-muted"><%= news.created_at.strftime('%d.%m.%Y') %></div>
+            <p class="card-text mb-auto"><%= news.body.truncate(40, separator: /\s/) %></p>
             <%= display_index_news_links(news) %>
           </div>
         </div>
@@ -16,4 +16,3 @@
     </div>
 <br>
 <br>
-<%= link_to 'New News', new_post_path %>
