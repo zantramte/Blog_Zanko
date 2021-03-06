@@ -9,6 +9,7 @@ module PostsHelper
     capture do
       if current_user == post.user
         concat link_to 'Izbriši', post, method: :delete, data: { confirm: 'Are you sure?' }
+        concat ' | '
         concat link_to 'Uredi', edit_post_path(post)
         concat ' | '
       end
