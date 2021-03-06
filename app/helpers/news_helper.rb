@@ -2,7 +2,6 @@ module NewsHelper
   def display_index_post_links(post)
     capture do
       concat link_to('Preberi več', post, class: 'streched-link')
-      end
     end
   end
 
