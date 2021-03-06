@@ -1,19 +1,19 @@
 module NewsHelper
-  def display_index_post_links(post)
+  def display_index_news_links(news)
     capture do
-      concat link_to('Preberi več', post, class: 'streched-link')
+      concat link_to('Preberi več', news, class: 'streched-link')
     end
   end
 
-  def display_show_post_links(post)
+  def display_show_news_links(news)
     capture do
-      if current_user == post.user
-        concat link_to 'Izbriši', post, method: :delete, data: { confirm: 'Are you sure?' }
+      if current_user == news.user
+        concat link_to 'Izbriši', news, method: :delete, data: { confirm: 'Are you sure?' }
         concat ' | '
-        concat link_to 'Uredi', edit_post_path(post)
+        concat link_to 'Uredi', edit_news_path(news)
         concat ' | '
       end
-      concat link_to 'Back', posts_path
+      concat link_to 'Back'
     end
   end
 end

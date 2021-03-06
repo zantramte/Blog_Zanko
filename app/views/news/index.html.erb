@@ -4,16 +4,16 @@
       <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"  style="background-color: white;">
           <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <strong class="d-inline-block mb-2 text-primary"><%= news.user.name || 'Anonimen avtor' %></strong>
             <h3 class="mb-0"><%= news.title %></h3>
-            <div class="mb-1 text-muted">Nov 12</div>
-            <p class="card-text mb-auto"><%= news.body %></p>
-            <%= display_index_post_links(news) %>
+            <div class="mb-1 text-muted"><%= post.created_at.strftime('%d.%m.%Y') %></div>
+            <p class="card-text mb-auto"><%= post.body.truncate(40, separator: /\s/) %></p>
+            <%= display_index_news_links(news) %>
           </div>
         </div>
       </div>
     <% end %>
     </div>
 <br>
-
+<br>
 <%= link_to 'New News', new_post_path %>
