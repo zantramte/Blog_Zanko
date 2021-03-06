@@ -13,7 +13,7 @@ module NewsHelper
         concat link_to 'Uredi', edit_news_path(news)
         concat ' | '
       end
-      concat link_to 'Back'
+      concat link_to 'Back', news_path
     end
   end
 end
