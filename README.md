@@ -1,24 +1,9 @@
-# README
+Website for posts and news
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hello! I made a website with Ruby on Rails. It allows users to login, register or reset their password. When they are 
+logged in, they can (create, delete, update => only if they are authors!) and see other posts from other users(authors).
 
-Things you may want to cover:
+I also added some css for better user experience, and also logo from medium, most recognized as one of the best websites for posts.
+I used a lot of gems, burt also two helpers: news and post helpers to make sure the functionality of my website is good enough.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I hope you enjoy using my website!
